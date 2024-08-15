@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>maleksh</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="crud">
+      <div class="head">
+        <h2>progroming and design</h2>
+        <p>MALEK SH</p>
+      </div>
+
+      <div class="inputs">
+        <input placeholder="product" type="text" id="title">
+        <select name="buy" id="buy"><!--select قائمة منسدلة-->
+          <option value="sales">sales</option><!-- 
+            selectالاختيارات-->
+            <option selected value="buy">buy</option><!--selected defult--> 
+           
+        </select>
+        <div class="price">
+         
+             <input onkeyup="getTotal()" type="number" id="price" placeholder="number">
+             <input onkeyup="getTotal()" type="number" id="taxes" placeholder="price">
+             <input onkeyup="getTotal()" type="number" id="ads" placeholder="price$">
+             <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+             <small id="total"></small>
+
+        </div>
+        <input type="number" id="count" placeholder="count">
+        <input type="text" id="category" placeholder="category">
+        <button id="submit">Create</button>
+      </div>
+
+
+      <div class="outputs">
+          <div class="searchBlock">
+             <input onkeyup="searchData(this.value)" type="text"  id="search" placeholder="search">
+             <div class="btnsearch">
+                <button onclick="getSearchMod(this.id)" id="searchTitle" class="searchTitle">search By title</button>
+                <button onclick="getSearchMod(this.id)" id="searchCategory" class="searchCategory">search By category</button>
+             </div>
+         </div>
+         <div id="deleteAll">
+          <!--ح ضيف ازرار من خلال الجافا سكريبت-->
+         </div>
+         <table>
+          <tr>
+            <th>id</th>
+            <th>product</th>
+            <th>status</th>
+            <th>number</th>
+            
+            <th>price</th>
+            <th>price$</th>
+            
+            <th>discount</th>
+            <th>total</th>
+            <th>category</th>
+            <th>update</th>
+            <th>delete</th>
+        
+          </tr>
+           
+        <tbody id="tbody"><!--بيانات تخيلية-->
+       
+         
+          </tbody>
+        </table>
+
+      </div>
+  
+    </div>
+
+
+    <script src="menu.js"></script>
+
+</body>
+</html>
